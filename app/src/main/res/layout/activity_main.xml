@@ -8,7 +8,7 @@
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    android:background="@color/colorPrimary"
+    android:background="#E3F2FD"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="30dp"
         android:text="     WELCOME"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#2962FF"
         android:textSize="30sp"
         android:textStyle="bold"
         app:fontFamily="@font/bungee" />

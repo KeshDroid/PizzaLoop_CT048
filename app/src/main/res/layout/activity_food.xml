@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Food"
+    android:padding="5dp"
+    android:background="@drawable/nbglyelwhite">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imgFood"
+        android:layout_width="wrap_content"
+        android:layout_height="348dp"
+        android:layout_below="@id/txtName"
+        android:layout_alignTop="@+id/txtName"
+        android:layout_marginTop="57dp"
+        app:srcCompat="@drawable/logonw" />
+    <TextView
+        android:id="@+id/txtIngre"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/imgFood"
+        android:text="Ingredians"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtIngDe"
+        android:layout_width="256dp"
+        android:layout_height="107dp"
+        android:layout_below="@id/imgFood"
+        android:layout_marginLeft="150dp" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/txtIngDe"
+        android:text="Price"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPriceV"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/txtIngDe"
+        android:layout_marginLeft="150dp" />
+
+    <TextView
+        android:id="@+id/txtSize"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/txtPrice"
+        android:text="Size"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSizeV"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/txtPriceV"
+        android:layout_marginLeft="150dp" />
+
+    <TextView
+        android:id="@+id/txtQty"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/txtSize"
+        android:text="Quantity"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/eTQty"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Enter Quantity"
+        android:layout_below="@id/txtSizeV"
+        android:layout_marginLeft="150dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/tic"
+        android:layout_below="@id/txtQty"
+        android:layout_marginLeft="175dp"/>
+
+</RelativeLayout>

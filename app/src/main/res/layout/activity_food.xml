@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Food"
     android:padding="5dp"
-    android:background="@drawable/nbglyelwhite">
+   android:background="@drawable/bg4">
 
     <TextView
         android:id="@+id/txtName"
@@ -21,13 +21,13 @@
         android:layout_below="@id/txtName"
         android:layout_alignTop="@+id/txtName"
         android:layout_marginTop="57dp"
-        app:srcCompat="@drawable/logonw" />
+        app:srcCompat="@drawable/logo" />
     <TextView
-        android:id="@+id/txtIngre"
+        android:id="@+id/txtIng"
         android:layout_width="143dp"
         android:layout_height="41dp"
         android:layout_below="@id/imgFood"
-        android:text="Ingredians"
+        android:text="Ingredients"
         android:textSize="20sp"
         android:textStyle="bold" />
     <TextView
@@ -87,15 +87,7 @@
         android:text=""
         android:hint="Enter Quantity"
         android:layout_below="@id/txtSizeV"
-        android:layout_marginLeft="150dp"/>
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        app:srcCompat="@drawable/tic"
-        android:layout_below="@id/txtQty"
-        android:layout_marginLeft="175dp"/>
+        android:layout_marginLeft="150dp"
+        android:autofillHints="" />
 
 </RelativeLayout>

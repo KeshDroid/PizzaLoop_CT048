@@ -22,24 +22,25 @@
         android:id="@+id/imgUsr"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="28dp"
         android:layout_below="@id/imgLogo"
         android:layout_marginTop="20dp"
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <EditText
         android:id="@+id/etUname"
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="46dp"
         android:layout_below="@id/imgLogo"
         android:layout_alignLeft="@id/imgUsr"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/txt_bg_sq_silver"
         android:ems="10"
         android:hint="User Name"
         android:inputType="textPersonName"
         android:textColor="@android:color/background_light"
-        android:textColorHint="#FFFFFF"/>
+        android:textColorHint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/imgTp"
@@ -47,22 +48,23 @@
         android:layout_height="40dp"
         android:layout_below="@id/imgUsr"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="28dp"
         app:srcCompat="@android:drawable/sym_action_call" />
 
     <EditText
         android:id="@+id/etTp"
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="46dp"
         android:layout_below="@id/etUname"
         android:layout_alignLeft="@id/imgTp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/txt_bg_sq_silver"
         android:ems="10"
         android:hint="Mobile Number"
         android:inputType="textPersonName"
         android:textColor="@android:color/background_light"
-        android:textColorHint="#FFFFFF"/>
+        android:textColorHint="#FFFFFF" />
 
 
 
@@ -74,21 +76,23 @@
         android:layout_height="50dp"
 
         android:layout_below="@id/imgTp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@android:drawable/ic_lock_lock" />
+
     <EditText
         android:id="@+id/etPw"
-        android:layout_width="250dp"
+        android:layout_width="230dp"
         android:layout_height="46dp"
-        android:ems="10"
         android:layout_below="@id/etTp"
         android:layout_alignLeft="@id/imgPw"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="15dp"
-        android:inputType="textPassword"
+        android:background="@drawable/txt_bg_sq_silver"
+        android:ems="10"
         android:hint="Password"
-        android:textColorHint="#FFFFFF"/>
+        android:inputType="textPassword"
+        android:textColorHint="#FFFFFF" />
 
     <Button
         android:id="@+id/btnSignUp"
@@ -100,7 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.96"
-        android:background="@drawable/btn_cnr_red"
+        android:background="@drawable/btn_very_rounded_red"
         android:shadowColor="#000000"
         android:textColor="#FFFFFF"
         android:layout_below="@id/etPw"

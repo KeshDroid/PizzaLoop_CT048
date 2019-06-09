@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentOptions"
+    android:padding="5dp"
+    android:background="@drawable/bgc">
+
+
+    <TextView
+        android:id="@+id/txtPO"
+        android:layout_width="258dp"
+        android:layout_height="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="PAYMENT OPTIONS"
+        android:textSize="24sp"
+        app:fontFamily="@font/bungee"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCre"
+        android:layout_width="230dp"
+        android:layout_height="74dp"
+        android:layout_below="@id/txtPO"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_very_rounded_purpl"
+        android:text="CREDIT CARD"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <Button
+        android:id="@+id/btnCash"
+        android:layout_width="230dp"
+        android:layout_height="74dp"
+        android:layout_below="@id/btnCre"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_very_rounded_blue"
+        android:text="CASH"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:typeface="normal" />
+</RelativeLayout>

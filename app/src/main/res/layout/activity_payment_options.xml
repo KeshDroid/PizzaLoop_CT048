@@ -11,14 +11,14 @@
 
     <TextView
         android:id="@+id/txtPO"
-        android:layout_width="258dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         android:text="PAYMENT OPTIONS"
-        android:textSize="24sp"
-        app:fontFamily="@font/bungee"
-        android:layout_marginTop="20dp"/>
+        android:textSize="30sp"
+        app:fontFamily="@font/bungee" />
 
     <Button
         android:id="@+id/btnCre"
@@ -45,4 +45,34 @@
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/txtPri"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnCash"
+        android:layout_alignLeft="@id/txtRs"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="85dp"
+        android:text="500"
+        android:textColor="@android:color/white"
+
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtRs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnCash"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="83dp"
+        android:text="Rs."
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
+
 </RelativeLayout>

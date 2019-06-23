@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/bg3"
+    tools:context=".CashOn">
+
+
+    <TextView
+        android:id="@+id/txtCO"
+        android:layout_width="301dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:text="      CASH ON DELIVERY"
+        android:textSize="24sp"
+        app:fontFamily="@font/bungee" />
+
+
+    <TextView
+        android:id="@+id/txtPri"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="500"
+        android:textSize="30dp"
+        android:layout_below="@id/txtCO"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="85dp"
+        android:layout_alignLeft="@id/txtRs"
+        android:layout_centerInParent="true"
+
+        />
+
+    <TextView
+        android:id="@+id/txtRs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtCO"
+        android:layout_marginLeft="130dp"
+        android:text="Rs."
+        android:textSize="30dp"
+        android:layout_marginTop="83dp"
+
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPri"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_very_rounded_green"
+        android:text="CONFIRM"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgCO"
+        android:layout_width="224dp"
+        android:layout_height="194dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        app:srcCompat="@drawable/cashon" />
+
+</RelativeLayout>

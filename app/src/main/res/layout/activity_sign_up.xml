@@ -8,7 +8,9 @@
     android:background="@drawable/bgf">
 
 
+
     <ImageView
+        android:layout_centerHorizontal="true"
         android:id="@+id/imgLogo"
         android:layout_width="273dp"
         android:layout_height="273dp"
@@ -112,6 +114,7 @@
         android:layout_marginTop="10dp"
 
         />
+
 
 
 </RelativeLayout>

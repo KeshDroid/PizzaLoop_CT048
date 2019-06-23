@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CCPay"></activity>
+        <activity android:name=".CashOn"></activity>
+        <activity android:name=".FoodMenu" />
+        <activity android:name=".CCPay" />
         <activity android:name=".PaymentOptions" />
         <activity android:name=".Food" />
-        <activity android:name=".Menu" />
         <activity
             android:name=".Navi"
             android:label="@string/title_activity_navi"

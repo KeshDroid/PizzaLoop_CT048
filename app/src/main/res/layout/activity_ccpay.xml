@@ -8,6 +8,7 @@
     android:padding="5dp"
     android:background="@drawable/bg4">
 
+
     <TextView
         android:id="@+id/txtCP"
         android:layout_width="258dp"
@@ -100,10 +101,11 @@
 
     <EditText
         android:id="@+id/eTExD"
+        android:inputType="date"
         android:layout_width="200dp"
         android:layout_height="41dp"
         android:ems="10"
-        android:inputType="textPersonName"
+
         android:text=""
         android:hint="Expire Date"
         android:layout_below="@id/eTc"
@@ -119,5 +121,42 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="25dp"
         app:srcCompat="@drawable/credit" />
+
+
+
+    <TextView
+        android:id="@+id/txtPri"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="500"
+        android:textSize="30dp"
+        android:layout_below="@id/eTExD"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="85dp"
+        android:layout_alignLeft="@id/txtRs"
+
+        />
+
+    <TextView
+        android:id="@+id/txtRs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtED"
+        android:layout_marginLeft="130dp"
+        android:text="Rs."
+        android:textSize="30dp"
+        android:layout_marginTop="83dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="CONFIRM"
+        android:background="@drawable/btn_very_rounded_green"
+        android:layout_below="@id/txtPri"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"/>
+
 
 </RelativeLayout>

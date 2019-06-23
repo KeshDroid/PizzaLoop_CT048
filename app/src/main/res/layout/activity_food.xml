@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Food"
     android:padding="5dp"
-   android:background="@drawable/bg4">
+    android:background="@drawable/bg4">
+
+
 
     <TextView
         android:id="@+id/txtName"
@@ -16,12 +18,13 @@
 
     <ImageView
         android:id="@+id/imgFood"
-        android:layout_width="wrap_content"
-        android:layout_height="348dp"
+        android:layout_width="342dp"
+        android:layout_height="342dp"
         android:layout_below="@id/txtName"
         android:layout_alignTop="@+id/txtName"
         android:layout_marginTop="57dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/txtIng"
         android:layout_width="143dp"
@@ -89,5 +92,15 @@
         android:layout_below="@id/txtSizeV"
         android:layout_marginLeft="150dp"
         android:autofillHints="" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_add_cart"
+        android:background="@drawable/btn_very_rounded_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
 
 </RelativeLayout>

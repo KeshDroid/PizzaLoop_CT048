@@ -27,7 +27,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 validate (etTp.getText().toString(),etPw.getText().toString());
-                //openFood();
+                //openMenu();
             }
         });
 
@@ -50,7 +50,7 @@ public class SignIn extends AppCompatActivity {
 
     private void validate (String etTp, String etPw){
         if((etTp.equals("1111")) && (etPw.equals("1111"))){
-            Intent intent = new Intent(SignIn.this,Food.class);
+            Intent intent = new Intent(SignIn.this,FoodMenu.class);
             startActivity(intent);
         }
 
@@ -61,5 +61,8 @@ public class SignIn extends AppCompatActivity {
 
     }
 
-
+   /* private void openMenu(){
+        Intent intent = new Intent( SignIn.this,ListMenu.class);
+        startActivity(intent);
+    }*/
 }

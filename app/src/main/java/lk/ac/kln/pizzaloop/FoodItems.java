@@ -50,7 +50,8 @@ public class FoodItems extends AppCompatActivity {
                     Pizza pizza = new Pizza();
                     pizza.setPizzaId(Integer.parseInt(object.get("pizzaId").toString()));
                     pizza.setName(object.get("name").toString());
-                    pizza.setImgurl(object.get("imageUrl").toString());
+                    pizza.setDescription(object.get("description").toString());
+                   //pizza.setImgurl(object.get("imageUrl").toString());
                     pizzaDetails.add(pizza);
                     System.out.println(pizza);
 
@@ -85,9 +86,12 @@ public class FoodItems extends AppCompatActivity {
             }
             Pizza item = itemsList.get(position);
             TextView tv =  convertView.findViewById(R.id.txtFoodN);
-            ImageView iv = convertView.findViewById(R.id.imgFood);
-            Picasso.get().load(item.getImgurl()).into(iv);
+            TextView tv1 =  convertView.findViewById(R.id.txtP1);
+           // ImageView iv = convertView.findViewById(R.id.imgFood);
+            //Picasso.get().load(item.getImgurl()).into(iv);
             tv.setText(item.getName());
+            tv1.setText(item.getDescription());
+          //  iv.setImage(item.getImgurl());
             return convertView;
         }
     }

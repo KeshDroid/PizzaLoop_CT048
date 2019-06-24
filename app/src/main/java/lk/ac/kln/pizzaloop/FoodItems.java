@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,7 +50,7 @@ public class FoodItems extends AppCompatActivity {
                     Pizza pizza = new Pizza();
                     pizza.setPizzaId(Integer.parseInt(object.get("pizzaId").toString()));
                     pizza.setName(object.get("name").toString());
-                    // pizza.setImageURL(object.get("imageUrl").toString());
+                    pizza.setImgurl(object.get("imageUrl").toString());
                     pizzaDetails.add(pizza);
                     System.out.println(pizza);
 
@@ -83,8 +85,8 @@ public class FoodItems extends AppCompatActivity {
             }
             Pizza item = itemsList.get(position);
             TextView tv =  convertView.findViewById(R.id.txtFoodN);
-            // ImageView iv = convertView.findViewById(R.id.imageView);
-            // Picasso.get().load(item.getImageURL()).into(iv);
+            ImageView iv = convertView.findViewById(R.id.imgFood);
+            Picasso.get().load(item.getImgurl()).into(iv);
             tv.setText(item.getName());
             return convertView;
         }

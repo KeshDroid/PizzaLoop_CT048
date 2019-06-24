@@ -49,8 +49,8 @@ public class SignIn extends AppCompatActivity {
     }
 
     private void validate (String etTp, String etPw){
-        if((etTp.equals("1111")) && (etPw.equals("1111"))){
-            Intent intent = new Intent(SignIn.this,FoodMenu.class);
+        if((etTp.equals("1")) && (etPw.equals("1111"))){
+            Intent intent = new Intent(SignIn.this,FoodItems.class);
             startActivity(intent);
         }
 

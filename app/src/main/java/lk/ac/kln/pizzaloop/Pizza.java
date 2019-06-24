@@ -1,27 +1,27 @@
 package lk.ac.kln.pizzaloop;
 
 public class Pizza {
-   // int pizzaId;
+    int pizzaId;
     String name;
     String description;
-   // float price;
+    float price;
     String imgurl;
 
-    public Pizza(String name, String description, String imgurl) {
+   /* public Pizza(String name, String description, String imgurl) {
       //  this.pizzaId = pizzaId;
         this.name = name;
         this.description = description;
         //this.price = price;
         this.imgurl = imgurl;
-    }
+    }*/
 
-   /* public int getPizzaId() {
+    public int getPizzaId() {
         return pizzaId;
     }
 
     public void setPizzaId(int pizzaId) {
         this.pizzaId = pizzaId;
-    }*/
+    }
 
     public String getName() {
         return name;
@@ -39,13 +39,13 @@ public class Pizza {
         this.description = description;
     }
 
-  /*  public float getPrice() {
+   public float getPrice() {
         return price;
     }
 
     public void setPrice(float price) {
         this.price = price;
-    }*/
+    }
 
     public String getImgurl() {
         return imgurl;

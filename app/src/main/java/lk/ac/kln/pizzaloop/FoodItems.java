@@ -50,14 +50,17 @@ public class FoodItems extends AppCompatActivity {
                     Pizza pizza = new Pizza();
                     pizza.setPizzaId(Integer.parseInt(object.get("pizzaId").toString()));
                     pizza.setName(object.get("name").toString());
+                   // pizza.setPrice(object.get("price").toString());
                     pizza.setDescription(object.get("description").toString());
-                   //pizza.setImgurl(object.get("imageUrl").toString());
+                    pizza.setImgurl(object.get("imgurl").toString());
                     pizzaDetails.add(pizza);
-                    System.out.println(pizza);
+                   // System.out.println(pizza);
 
                     ListView pizzaList = findViewById(R.id.listView);
                     CustomAdapter listAdapter = new CustomAdapter(getApplicationContext(), R.layout.food_items, pizzaDetails);
                     pizzaList.setAdapter(listAdapter);
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -87,11 +90,11 @@ public class FoodItems extends AppCompatActivity {
             Pizza item = itemsList.get(position);
             TextView tv =  convertView.findViewById(R.id.txtFoodN);
             TextView tv1 =  convertView.findViewById(R.id.txtP1);
-           // ImageView iv = convertView.findViewById(R.id.imgFood);
-            //Picasso.get().load(item.getImgurl()).into(iv);
+            ImageView iv = convertView.findViewById(R.id.imgFood);
+            Picasso.get().load(item.getImgurl()).into(iv);
             tv.setText(item.getName());
             tv1.setText(item.getDescription());
-          //  iv.setImage(item.getImgurl());
+            //iv.setImage(item.getImgurl());
             return convertView;
         }
     }

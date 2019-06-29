@@ -54,4 +54,7 @@ public class Pizza {
     public void setImgurl(String imgurl) {
         this.imgurl = imgurl;
     }
+
+   // public void setPrice(String price) {
+   // }
 }

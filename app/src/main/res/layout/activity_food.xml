@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/imgFood"
-        android:layout_width="342dp"
-        android:layout_height="342dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_below="@id/txtName"
         android:layout_alignTop="@+id/txtName"
         android:layout_marginTop="57dp"
@@ -57,26 +57,10 @@
         android:layout_marginLeft="150dp" />
 
     <TextView
-        android:id="@+id/txtSize"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtPrice"
-        android:text="Size"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtSizeV"
-        android:layout_width="250dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtPriceV"
-        android:layout_marginLeft="150dp" />
-
-    <TextView
         android:id="@+id/txtQty"
         android:layout_width="143dp"
         android:layout_height="41dp"
-        android:layout_below="@id/txtSize"
+        android:layout_below="@id/txtPrice"
         android:text="Quantity"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -89,18 +73,19 @@
         android:inputType="textPersonName"
         android:text=""
         android:hint="Enter Quantity"
-        android:layout_below="@id/txtSizeV"
+        android:layout_below="@id/txtPrice"
         android:layout_marginLeft="150dp"
         android:autofillHints="" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnAddCart"
         android:layout_width="70dp"
         android:layout_height="30dp"
         app:srcCompat="@drawable/ic_add_cart"
         android:background="@drawable/btn_very_rounded_blue"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 
 
 </RelativeLayout>

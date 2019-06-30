@@ -61,7 +61,7 @@ public class FoodItems extends AppCompatActivity {
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http://192.168.43.55:8080/demo/all"; //192.168.8.112 172.19.31.144  192.168.43.55
+        String url ="http://192.168.8.112:8080/demo/all"; //192.168.8.112 172.19.31.144  192.168.43.55
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,
                 null, new HTTPResponseListner(), new HTTPErrorListner());
@@ -77,7 +77,7 @@ public class FoodItems extends AppCompatActivity {
                     Pizza pizza = new Pizza();
                     pizza.setPizzaId(Integer.parseInt(object.get("pizzaId").toString()));
                     pizza.setName(object.get("name").toString());
-                    //pizza.setPrice(Float.parseFloat(object.get("price").toString()));
+                    pizza.setPrice(Float.parseFloat(object.get("price").toString()));
                     pizza.setDescription(object.get("description").toString());
                     pizza.setImgurl(object.get("imgurl").toString());
                     pizzaDetails.add(pizza);
@@ -120,8 +120,8 @@ public class FoodItems extends AppCompatActivity {
             ImageView iv = convertView.findViewById(R.id.imgFood);
             Picasso.get().load(item.getImgurl()).into(iv);
             tv.setText(item.getName());
-            tv1.setText(item.getDescription());
-            //tv1.setText(item.getPrice());
+            //tv1.setText(item.getDescription());
+            tv1.setText("Rs."+item.getPrice());
             //iv.setImage(item.getImgurl());
             return convertView;
         }

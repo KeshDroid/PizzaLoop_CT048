@@ -33,6 +33,7 @@ public class Food extends AppCompatActivity {
     Dialog dialog;
     TextView txtAdded,txtSuc;
     ImageView imgClose;*/
+    public ImageButton imgBtnGoCart1;
 
 
     @Override
@@ -48,6 +49,7 @@ public class Food extends AppCompatActivity {
         TextView price = (TextView) findViewById(R.id.txtPriceV);
         ImageView imageView = (ImageView) findViewById(R.id.imgFood);
         btnAddCart = (ImageButton) findViewById(R.id.btnAddCart);
+        imgBtnGoCart1 = (ImageButton) findViewById(R.id.imgBtnGoCart1);
 
         name.setText(intent.getStringExtra("name"));
         description.setText(intent.getStringExtra("description"));
@@ -65,6 +67,18 @@ public class Food extends AppCompatActivity {
                 openNext();
             }
         });
+
+        imgBtnGoCart1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoCart();
+            }
+        });
+    }
+
+    public void gotoCart() {
+        Intent intent = new Intent(Food.this,CartActivity.class);
+        startActivity(intent);
     }
 
 

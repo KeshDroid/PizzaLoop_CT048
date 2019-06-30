@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,14 +30,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FoodItems extends AppCompatActivity {
+
+
     private List<Pizza> pizzaDetails = new ArrayList<>();
     ListView listView;
+    private ImageButton imgBtnGoCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_items);
         listView = (ListView) findViewById(R.id.listView);
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (this,android.R.layout.activity_list_item);
@@ -66,6 +72,20 @@ public class FoodItems extends AppCompatActivity {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,
                 null, new HTTPResponseListner(), new HTTPErrorListner());
         queue.add(request);
+
+        imgBtnGoCart = (ImageButton) findViewById(R.id.imgBtnGoCart);
+
+        imgBtnGoCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToCart();
+            }
+        });
+    }
+
+    public void goToCart() {
+        Intent intent = new Intent(FoodItems.this,CartActivity.class);
+        startActivity(intent);
     }
 
     class HTTPResponseListner implements Response.Listener<JSONArray>{
@@ -126,4 +146,5 @@ public class FoodItems extends AppCompatActivity {
             return convertView;
         }
     }
+
 }

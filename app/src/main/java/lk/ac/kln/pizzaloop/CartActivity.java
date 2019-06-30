@@ -92,9 +92,9 @@ public class CartActivity extends AppCompatActivity {
             TextView tv1 =convertView.findViewById(R.id.txtCartP1);
             TextView tv2 =convertView.findViewById(R.id.txtCartQty);
 
-            tv.setText("Name:  "+item.getPizName());
-            tv1.setText("Price: Rs."+item.getPrice());
-            tv2.setText("Quantity:"+item.getQty());
+            tv.setText(""+item.getPizName());
+            tv1.setText("Rs."+item.getPrice());
+            tv2.setText(""+item.getQty());
             return  convertView;
         }
     }

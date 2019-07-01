@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUp"
-    android:background="@drawable/bgf">
+    android:background="@drawable/bgfwhite">
 
 
 
@@ -19,82 +19,111 @@
         android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:id="@+id/lis1">
 
-    <ImageView
-        android:id="@+id/imgUsr"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="28dp"
-        android:layout_below="@id/imgLogo"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        <ImageView
+            android:id="@+id/imgUsr"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/imgLogo"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/ic_account_circle_white_24dp"
+            android:background="@drawable/btn_very_rounded_purpl"/>
 
-    <EditText
-        android:id="@+id/etUname"
-        android:layout_width="230dp"
-        android:layout_height="46dp"
-        android:layout_below="@id/imgLogo"
-        android:layout_alignLeft="@id/imgUsr"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/txt_bg_sq_silver"
-        android:ems="10"
-        android:hint="User Name"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/background_light"
-        android:textColorHint="#FFFFFF" />
+        <EditText
+            android:id="@+id/etUsr"
+            android:layout_width="230dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/imgLogo"
+            android:layout_alignLeft="@id/imgTp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="#FFFFFF"
+            android:textAlignment="center"
+            android:background="@drawable/txt_bg_silver"/>
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgTp"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/imgUsr"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="28dp"
-        app:srcCompat="@android:drawable/sym_action_call" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:id="@+id/lis2">
 
-    <EditText
-        android:id="@+id/etTp"
-        android:layout_width="230dp"
-        android:layout_height="46dp"
-        android:layout_below="@id/etUname"
-        android:layout_alignLeft="@id/imgTp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/txt_bg_sq_silver"
-        android:ems="10"
-        android:hint="Mobile Number"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/background_light"
-        android:textColorHint="#FFFFFF" />
+        <ImageView
+            android:id="@+id/imgTp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/imgLogo"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/ic_phone_android_white_24dp"
+            android:background="@drawable/btn_very_rounded_purpl"/>
+
+        <EditText
+            android:id="@+id/etTp"
+            android:layout_width="230dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/imgLogo"
+            android:layout_alignLeft="@id/imgTp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="#FFFFFF"
+            android:textAlignment="center"
+            android:background="@drawable/txt_bg_silver"/>
+    </LinearLayout>
 
 
 
 
 
-    <ImageView
-        android:id="@+id/imgPw"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
 
-        android:layout_below="@id/imgTp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@android:drawable/ic_lock_lock" />
 
-    <EditText
-        android:id="@+id/etPw"
-        android:layout_width="230dp"
-        android:layout_height="46dp"
-        android:layout_below="@id/etTp"
-        android:layout_alignLeft="@id/imgPw"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/txt_bg_sq_silver"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="#FFFFFF" />
+
+
+    <LinearLayout
+        android:id="@+id/lis4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="400dp">
+        <ImageView
+            android:id="@+id/imgPw"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ic_lock_white_24dp"
+            android:background="@drawable/btn_very_rounded_purpl"/>
+        <EditText
+            android:id="@+id/etPw"
+            android:layout_width="230dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:layout_alignLeft="@id/imgPw"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColorHint="#FFFFFF"
+            android:textAlignment="center"
+            android:background="@drawable/txt_bg_silver"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnSignUp"
@@ -109,7 +138,7 @@
         android:background="@drawable/btn_very_rounded_red"
         android:shadowColor="#000000"
         android:textColor="#FFFFFF"
-        android:layout_below="@id/etPw"
+        android:layout_below="@id/lis4"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
 

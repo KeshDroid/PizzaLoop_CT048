@@ -8,12 +8,14 @@
     android:padding="5dp"
     android:background="@drawable/bg4">
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/txtName"
         android:layout_width="375dp"
         android:layout_height="53dp"
-
         android:textAlignment="center"
         android:textColor="@color/colorDBlue"
         android:textSize="24sp"
@@ -22,14 +24,19 @@
 
     <ImageView
         android:id="@+id/imgFood"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:layout_below="@id/txtName"
         android:layout_alignTop="@+id/txtName"
-        android:layout_marginTop="60dp"
-
+        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:background="@drawable/btn_cnr_white_normal"/>
+
+        <LinearLayout
+            android:id="@+id/li1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <TextView
         android:id="@+id/txtIng"
         android:layout_width="143dp"
@@ -38,22 +45,28 @@
         android:text="Ingredients"
         android:textSize="20sp"
         android:textStyle="bold"
-
-
         android:textColor="@color/colorDBlue"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="4dp"/>
+
 
     <TextView
         android:id="@+id/txtIngDe"
         android:layout_width="227dp"
         android:layout_height="100dp"
         android:layout_below="@id/imgFood"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
         android:textStyle="bold"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"/>
+        </LinearLayout>
 
+
+        <LinearLayout
+            android:id="@+id/li2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
     <TextView
         android:id="@+id/txtPrice"
         android:layout_width="143dp"
@@ -62,51 +75,56 @@
         android:text="Price"
         android:textSize="20sp"
         android:textStyle="bold"
-
-
-        android:textColor="@color/colorDBlue"/>
+        android:textColor="@color/colorDBlue"
+        android:layout_marginTop="3dp"/>
 
     <TextView
         android:id="@+id/txtPriceV"
         android:layout_width="250dp"
         android:layout_height="41dp"
         android:layout_below="@id/txtIngDe"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+
         android:textStyle="bold"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"/>
 
-    <TextView
-        android:id="@+id/txtQty"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtPrice"
-        android:text="Quantity"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/li3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
 
-        android:textColor="@color/colorDBlue"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/txtQty"
+                android:layout_width="143dp"
+                android:layout_height="41dp"
 
-    <EditText
-        android:id="@+id/eTQty"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:hint="Enter Quantity"
-        android:layout_below="@id/txtPrice"
-        android:layout_marginLeft="150dp"
-        android:autofillHints=""
-        android:layout_marginTop="6dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        />
+                android:text="Quantity"
+                android:textColor="@color/colorDBlue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/eTQty"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtPrice"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Enter Quantity"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
     <ImageButton
         android:id="@+id/btnAddCart"
         android:layout_width="90dp"
@@ -117,6 +135,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"/>
 
+
+
     <ImageButton
         android:id="@+id/imgBtnGoCart1"
         android:layout_width="60dp"
@@ -124,9 +144,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_shopping_cart_white_24dp"
-        android:background="@drawable/btn_very_rounded_pink"
-
-        />
+        android:background="@drawable/btn_very_rounded_pink"/>
 
 
 </RelativeLayout>

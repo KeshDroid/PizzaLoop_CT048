@@ -57,7 +57,7 @@ public class FoodItems extends AppCompatActivity {
                 intent.putExtra("name",pizza.getName());
                 intent.putExtra("description",pizza.getDescription());
                 intent.putExtra("imgurl",pizza.getImgurl());
-                //intent.putExtra("price",pizza.getPrice());
+                intent.putExtra("price",pizza.getPrice());
                 startActivityForResult(intent, 0);
                // startActivityForResult(intent, );
 

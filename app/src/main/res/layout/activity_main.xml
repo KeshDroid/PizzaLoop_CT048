@@ -8,7 +8,7 @@
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    android:background="#E3F2FD"
+    android:background="@drawable/bgfwhite"
     tools:context=".MainActivity">
 
     <TextView

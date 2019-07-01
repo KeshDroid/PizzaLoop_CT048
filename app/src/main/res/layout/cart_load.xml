@@ -127,7 +127,7 @@
             android:id="@+id/imgBtnAdd"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_add_white_24dp"
+            android:src="@drawable/ic_create_white_24dp"
             android:background="@drawable/btn_very_rounded_green"
             android:layout_marginTop="8dp"
             />
@@ -135,8 +135,8 @@
             android:id="@+id/imgBtnRemove"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_remove_white_24dp"
-            android:background="@drawable/btn_very_rounded_green"
+            android:src="@drawable/ic_format_list_bulleted_white_24dp"
+            android:background="@drawable/btn_very_rounded_purpl"
             android:layout_marginTop="8dp"
             />
 

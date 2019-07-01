@@ -8,12 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -26,9 +28,12 @@ import com.squareup.picasso.Picasso;
 public class Food extends AppCompatActivity {
 
     ImageButton btnAddCart;
-    public Double price,total;
-    public String piz_name = "ss" ;
-    public Integer qty;
+    public Float price1,total,fprice,finTot;
+    public String pizName;
+    public Integer qty, fqty;
+    public String qty1;
+    public EditText eTQty;
+    public String  des;
    /* ImageButton btnDone;
     Dialog dialog;
     TextView txtAdded,txtSuc;
@@ -36,10 +41,14 @@ public class Food extends AppCompatActivity {
     public ImageButton imgBtnGoCart1;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
+
+
 
 
         Intent intent = getIntent();
@@ -50,12 +59,18 @@ public class Food extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.imgFood);
         btnAddCart = (ImageButton) findViewById(R.id.btnAddCart);
         imgBtnGoCart1 = (ImageButton) findViewById(R.id.imgBtnGoCart1);
+        eTQty = (EditText) findViewById(R.id.eTQty);
 
-        name.setText(intent.getStringExtra("name"));
-        description.setText(intent.getStringExtra("description"));
-        price.setText(intent.getStringExtra("price"));
+       // name.setText(intent.getStringExtra("name"));
+        pizName= intent.getStringExtra("name");
+        name.setText(pizName);
+        des= intent.getStringExtra("description");
+        description.setText(des);
+
+        price1=intent.getFloatExtra("price",0);
+        price.setText("Rs. "+price1);
         Picasso.get().load(intent.getStringExtra("imgurl")).into(imageView);
-        System.out.println(name);
+        System.out.println(price);
 
 
         //btnAddCart = (Button) findViewById(R.id.btnAddCart);
@@ -74,7 +89,25 @@ public class Food extends AppCompatActivity {
                 gotoCart();
             }
         });
+
+        eTQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qty = Integer.parseInt(eTQty.getText().toString());
+                //qty = eTQty.getText();
+                Intent intent1 =getIntent();
+                price1 = intent1.getFloatExtra("price",0);
+                total = qty*price1;
+
+                System.out.println(total);
+            }
+        });
+
+       //fprice=total;
+      // fqty=qty;
     }
+
+
 
     public void gotoCart() {
         Intent intent = new Intent(Food.this,CartActivity.class);
@@ -127,7 +160,7 @@ public class Food extends AppCompatActivity {
         public void openNext() {
 
 
-            String url = "http://192.168.8.112:8080/demo/addcart?name="+piz_name + "&price="+price  + "&total=" + total + "&qty="+ qty;
+            String url = "http://192.168.8.112:8080/demo/addcart?PizName="+pizName + "&cPrice="+price1  + "&qty="+ qty + "&total=" +total;
             RequestQueue requestQueue = Volley.newRequestQueue(Food.this);
 
             StringRequest stringRequest =new StringRequest(
@@ -154,7 +187,7 @@ public class Food extends AppCompatActivity {
     private class HTTPErrorListner implements Response.ErrorListener {
         @Override
         public void onErrorResponse(VolleyError error) {
-            Toast.makeText(getApplicationContext(),"errr",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"errr"+error,Toast.LENGTH_SHORT).show();
         }
     }
 

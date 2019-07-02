@@ -9,177 +9,178 @@
     android:background="@drawable/bg4">
 
 
-    <TextView
-        android:id="@+id/txtCP"
-        android:layout_width="258dp"
-        android:layout_height="52dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:text="      CARD PAYMENT"
-        android:textSize="24sp"
-        app:fontFamily="@font/bungee"
-        android:layout_marginTop="20dp"/>
+                <TextView
+                    android:id="@+id/txtCP"
+                    android:layout_width="258dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:text="      CARD PAYMENT"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/bungee"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorDBlue"/>
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtCP"
-        android:text="Name on Card"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"/>
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="143dp"
+                    android:layout_height="41dp"
+                    android:layout_below="@id/txtCP"
+                    android:text="Name on Card"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:id="@+id/eTName"
-        android:layout_width="200dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:hint="USER"
-        android:layout_below="@id/txtCP"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints=""
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/eTName"
+                    android:layout_width="200dp"
+                    android:layout_height="41dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:hint="USER"
+                    android:layout_below="@id/txtCP"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints=""
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"/>
 
-    <TextView
-        android:id="@+id/txtNumber"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtName"
-        android:text="Card Number"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"/>
+                <TextView
+                    android:id="@+id/txtNumber"
+                    android:layout_width="143dp"
+                    android:layout_height="41dp"
+                    android:layout_below="@id/txtName"
+                    android:text="Card Number"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:id="@+id/eTNumber"
-        android:layout_width="200dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:hint="XXXX-XXXX-XXXX-XXXX-"
-        android:layout_below="@id/eTName"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints=""
-        android:maxLength="16"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/eTNumber"
+                    android:layout_width="200dp"
+                    android:layout_height="41dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:hint="XXXX-XXXX-XXXX-XXXX-"
+                    android:layout_below="@id/eTName"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints=""
+                    android:maxLength="16"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"/>
 
-    <TextView
-        android:id="@+id/txtCCN"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtNumber"
-        android:text="CVV"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"/>
+                <TextView
+                    android:id="@+id/txtCCN"
+                    android:layout_width="143dp"
+                    android:layout_height="41dp"
+                    android:layout_below="@id/txtNumber"
+                    android:text="CVV"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:id="@+id/eTc"
-        android:layout_width="200dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:hint="xxx"
-        android:layout_below="@id/eTNumber"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints=""
-        android:maxLength="3"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"/>
+                <EditText
+                    android:id="@+id/eTc"
+                    android:layout_width="200dp"
+                    android:layout_height="41dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:hint="xxx"
+                    android:layout_below="@id/eTNumber"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints=""
+                    android:maxLength="3"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"/>
 
-    <TextView
-        android:id="@+id/txtED"
-        android:layout_width="143dp"
-        android:layout_height="41dp"
-        android:layout_below="@id/txtCCN"
-        android:text="Expire Date"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"/>
+                <TextView
+                    android:id="@+id/txtED"
+                    android:layout_width="143dp"
+                    android:layout_height="41dp"
+                    android:layout_below="@id/txtCCN"
+                    android:text="Expire Date"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
 
-    <EditText
-        android:id="@+id/eTExD"
-        android:inputType="date"
-        android:layout_width="200dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:textColor="@color/colorWhite"
-        android:text=""
-        android:hint="YYYY/MM"
-        android:layout_below="@id/eTc"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints=""
-        android:textSize="20sp"/>
+                <EditText
+                    android:id="@+id/eTExD"
+                    android:inputType="date"
+                    android:layout_width="200dp"
+                    android:layout_height="41dp"
+                    android:ems="10"
+                    android:textColor="@color/colorWhite"
+                    android:text=""
+                    android:hint="YYYY/MM"
+                    android:layout_below="@id/eTc"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="15dp"
+                    android:autofillHints=""
+                    android:textSize="20sp"/>
 
-    <ImageView
-        android:id="@+id/imgCard"
-        android:layout_width="260dp"
-        android:layout_height="192dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="25dp"
-        app:srcCompat="@drawable/credit" />
+                <ImageView
+                    android:id="@+id/imgCard"
+                    android:layout_width="260dp"
+                    android:layout_height="192dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/credit" />
 
 
 
-    <TextView
-        android:id="@+id/txtPri"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="500"
-        android:textSize="30dp"
-        android:layout_below="@id/eTExD"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="85dp"
-        android:layout_alignLeft="@id/txtRs"
+                <TextView
+                    android:id="@+id/txtPri"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="500"
+                    android:textSize="30dp"
+                    android:layout_below="@id/eTExD"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_alignLeft="@id/txtRs"
 
-        />
+                    />
 
-    <TextView
-        android:id="@+id/txtRs"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/txtED"
-        android:layout_marginLeft="130dp"
-        android:text="Rs."
-        android:textSize="30dp"
-        android:layout_marginTop="83dp"
-        />
+                <TextView
+                    android:id="@+id/txtRs"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txtED"
+                    android:layout_marginLeft="130dp"
+                    android:text="Rs."
+                    android:textSize="30dp"
+                    android:layout_marginTop="83dp"
+                    />
 
-    <Button
-        android:id="@+id/btnCon1"
-        android:layout_width="130dp"
-        android:layout_height="67dp"
-        android:text="CONFIRM"
-        android:background="@drawable/btn_very_rounded_green"
-        android:layout_below="@id/txtPri"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+                <Button
+                    android:id="@+id/btnCon1"
+                    android:layout_width="130dp"
+                    android:layout_height="67dp"
+                    android:text="CONFIRM"
+                    android:background="@drawable/btn_very_rounded_green"
+                    android:layout_below="@id/txtPri"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="50dp"
 
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
-    <ImageButton
-        android:id="@+id/imgBtnGoCart"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_format_list_bulleted_white_24dp"
-        android:background="@drawable/btn_very_rounded_pink"
-        />
+                <ImageButton
+                    android:id="@+id/imgBtnGoCart"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_format_list_bulleted_white_24dp"
+                    android:background="@drawable/btn_very_rounded_purpl"
+                    />
 
 
 

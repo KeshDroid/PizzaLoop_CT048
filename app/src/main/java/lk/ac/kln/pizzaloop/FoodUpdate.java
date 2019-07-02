@@ -22,11 +22,11 @@ public class FoodUpdate extends AppCompatActivity {
 
 
     public String pizName1;
-    public Float price1,qty1,total;
+    public Float price1,qty1,total,totV;
     public Integer qtyUp;
     public String qty;
     public ImageButton imgBtnDelete,btnUpdateCart;
-    public ImageButton imgBtnGoCartUp;
+    public ImageButton imgBtnGoList;
     ElegantNumberButton elegantNumberButton1;
     private ElegantNumberButton Qunty;
 
@@ -43,7 +43,7 @@ public class FoodUpdate extends AppCompatActivity {
         TextView price = (TextView) findViewById(R.id.txtPriceVUp);
 
         btnUpdateCart = (ImageButton) findViewById(R.id.btnUpdateCart);
-        imgBtnGoCartUp = (ImageButton) findViewById(R.id.imgBtnGoCartUp);
+        imgBtnGoList = (ImageButton) findViewById(R.id.imgBtnGoList);
         imgBtnDelete = (ImageButton) findViewById(R.id.imgBtnDelete);
         elegantNumberButton1= findViewById(R.id.ele2);
 
@@ -54,10 +54,11 @@ public class FoodUpdate extends AppCompatActivity {
         System.out.println(pizName1);
 
         price1=intent.getFloatExtra("cPrice",0);
-        price.setText("Rs. "+price1);
-        System.out.println(price1);
+        //price.setText("Rs. "+price1);
+        //System.out.println(price1);
 
-        //qty = intent.get
+        totV= intent.getFloatExtra("total",0);
+        price.setText("Rs."+totV);
 
 
 
@@ -73,10 +74,10 @@ public class FoodUpdate extends AppCompatActivity {
             }
         });
 
-        imgBtnGoCartUp.setOnClickListener(new View.OnClickListener() { // Go to FOOD ITEMS
+        imgBtnGoList.setOnClickListener(new View.OnClickListener() { // Go to FOOD ITEMS
             @Override
             public void onClick(View v) {
-                goPurchace();
+                goList();
             }
         });
 
@@ -99,8 +100,8 @@ public class FoodUpdate extends AppCompatActivity {
 
     }
 
-    public void goPurchace() {
-        Intent intent = new Intent(FoodUpdate.this,PaymentOptions.class);
+    public void goList() {
+        Intent intent = new Intent(FoodUpdate.this,FoodItems.class);
         startActivity(intent);
     }
 

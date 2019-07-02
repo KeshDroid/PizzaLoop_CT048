@@ -39,11 +39,7 @@
         <activity android:name=".FoodUpdate" />
         <activity android:name=".CartActivity"></activity>
         <activity android:name=".FoodItems">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".CashOn" />
@@ -55,7 +51,13 @@
             android:label="@string/title_activity_navi"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUp" />
-        <activity android:name=".SignIn" />
+        <activity android:name=".SignIn" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity"></activity>
 
         <meta-data

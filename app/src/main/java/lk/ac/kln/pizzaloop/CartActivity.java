@@ -192,10 +192,10 @@ public class CartActivity extends AppCompatActivity {
         }
     }
 
-    public void goToList() {
+  /*  public void goToList() {
         Intent intent = new Intent(CartActivity.this,FoodItems.class);
         startActivity(intent);
-    }
+    }*/
 
   /*  public class ViewHolder{
         ImageButton imgBtnDel;

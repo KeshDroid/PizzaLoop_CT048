@@ -18,7 +18,8 @@
         android:layout_marginTop="24dp"
         android:text="      CASH ON DELIVERY"
         android:textSize="24sp"
-        app:fontFamily="@font/bungee" />
+        app:fontFamily="@font/bungee"
+        android:textColor="@color/colorDBlue"/>
 
 
     <TextView
@@ -75,7 +76,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_format_list_bulleted_white_24dp"
-        android:background="@drawable/btn_very_rounded_pink"
+        android:background="@drawable/btn_very_rounded_purpl"
 
         />
 

@@ -8,111 +8,119 @@
     android:padding="5dp"
     android:background="@drawable/bg4">
 
-    <LinearLayout
-        android:id="@+id/mainLiUp"
-        android:layout_width="394dp"
-        android:layout_height="390dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txtNameUp"
-            android:layout_width="375dp"
-            android:layout_height="53dp"
-            android:layout_marginLeft="5dp"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/colorDBlue"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/bungee" />
-
-        <ImageView
-            android:id="@+id/imgFoodUp"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
-            android:layout_below="@id/txtName"
-            android:layout_alignTop="@+id/txtName"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/logonw1"
-            android:background="@drawable/btn_cnr_white_normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/liUp1"
-        android:layout_width="wrap_content"
-        android:layout_height="108dp"
-        android:layout_below="@+id/mainLiUp"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true">
-
-        <TextView
-            android:id="@+id/txtQtyUp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/mainLi"
-            android:layout_marginTop="3dp"
-            android:text="New Quantity"
-            android:textColor="@color/colorDBlue"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAlignment="center"/>
+            android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/mainLiUp"
+                        android:layout_width="394dp"
+                        android:layout_height="390dp"
+                        android:orientation="vertical">
 
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:id="@+id/ele2"
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_below="@+id/mainLi"
-            android:layout_alignLeft="@+id/txtQty"
-            android:layout_centerInParent="true"
+                        <TextView
+                            android:id="@+id/txtNameUp"
+                            android:layout_width="375dp"
+                            android:layout_height="53dp"
+                            android:layout_marginLeft="5dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/colorDBlue"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/bungee" />
 
-            android:layout_marginTop="4dp"
-            android:background="@color/cardview_dark_background"
-            app:finalNumber="10"
-            app:initialNumber="0"
-            app:textSize="10dp">
+                        <ImageView
+                            android:id="@+id/imgFoodUp"
+                            android:layout_width="280dp"
+                            android:layout_height="280dp"
+                            android:layout_below="@id/txtName"
+                            android:layout_alignTop="@+id/txtName"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/logonw1"
+                            android:background="@drawable/btn_cnr_white_normal" />
+                    </LinearLayout>
 
-        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+                    <LinearLayout
+                        android:id="@+id/liUp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="108dp"
+                        android:layout_below="@+id/mainLiUp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true">
 
-    </LinearLayout>
+                        <TextView
+                            android:id="@+id/txtQtyUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/mainLi"
+                            android:layout_marginTop="3dp"
+                            android:text="New Quantity"
+                            android:textColor="@color/colorDBlue"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"/>
+
+                        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                            android:id="@+id/ele2"
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/mainLi"
+                            android:layout_alignLeft="@+id/txtQty"
+                            android:layout_centerInParent="true"
+
+                            android:layout_marginTop="4dp"
+                            android:background="@color/cardview_dark_background"
+                            app:finalNumber="10"
+                            app:initialNumber="0"
+                            app:textSize="10dp">
+
+                        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+                    </LinearLayout>
 
 
 
 
 
-    <LinearLayout
-        android:id="@+id/liUp2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/liUp1"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true">
+                    <LinearLayout
+                        android:id="@+id/liUp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/liUp1"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true">
 
-        <TextView
-            android:id="@+id/txtPrice"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_alignTop="@+id/liUp2"
-            android:textAlignment="center"
-            android:layout_marginTop="3dp"
-            android:text="Price"
-            android:textColor="@color/colorDBlue"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/txtPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:layout_alignTop="@+id/liUp2"
+                            android:textAlignment="center"
+                            android:layout_marginTop="3dp"
+                            android:text="Price"
+                            android:textColor="@color/colorDBlue"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txtPriceVUp"
-        android:layout_width="250dp"
-        android:layout_height="41dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:textAlignment="center"/>
-    </LinearLayout>
-
+                    <TextView
+                        android:id="@+id/txtPriceVUp"
+                        android:layout_width="250dp"
+                        android:layout_height="41dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+                    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
     <ImageButton
         android:id="@+id/btnUpdateCart"
@@ -127,13 +135,13 @@
 
 
     <ImageButton
-        android:id="@+id/imgBtnGoCartUp"
+        android:id="@+id/imgBtnGoList"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_attach_money_white_24dp"
-        android:background="@drawable/btn_very_rounded_pink"/>
+        android:src="@drawable/ic_format_list_bulleted_white_24dp"
+        android:background="@drawable/btn_very_rounded_purpl"/>
 
     <ImageButton
         android:id="@+id/imgBtnDelete"

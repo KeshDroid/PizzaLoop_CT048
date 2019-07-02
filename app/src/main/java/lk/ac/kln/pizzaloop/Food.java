@@ -99,6 +99,7 @@ public class Food extends AppCompatActivity {
 
               if (qty!=0){
                     addCart();
+                    openNext();
 
                 }else{
                     Toast.makeText(Food.this, "Quantity is Empty.", Toast.LENGTH_SHORT).show();

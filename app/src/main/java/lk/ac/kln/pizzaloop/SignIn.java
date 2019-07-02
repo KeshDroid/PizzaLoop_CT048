@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignIn extends AppCompatActivity {
     private EditText etTp;
@@ -44,10 +45,6 @@ public class SignIn extends AppCompatActivity {
             startActivity(intent);
         }
 
-         public void openFood(){
-            Intent intent = new Intent(SignIn.this,Food.class);
-            startActivity(intent);
-    }
 
     private void validate (String etTp, String etPw){
         if((etTp.equals("1")) && (etPw.equals("1111"))){
@@ -56,7 +53,7 @@ public class SignIn extends AppCompatActivity {
         }
 
         else {
-            //Info.setText("Login Faild");
+            Toast.makeText(SignIn.this, "Login Fail", Toast.LENGTH_SHORT).show();
 
         }
 

@@ -47,7 +47,7 @@
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:hint="Price"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:textColor="@color/colorPink"
         android:textSize="23sp"
         android:background="@drawable/btn_very_rounded_wite"
         android:textAlignment="center"

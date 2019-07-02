@@ -68,4 +68,15 @@
         android:layout_marginLeft="150dp"
         app:srcCompat="@drawable/cashon" />
 
+    <ImageButton
+        android:id="@+id/imgBtnGoCart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_format_list_bulleted_white_24dp"
+        android:background="@drawable/btn_very_rounded_pink"
+
+        />
+
 </RelativeLayout>

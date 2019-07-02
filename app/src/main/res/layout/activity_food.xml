@@ -9,8 +9,9 @@
     android:background="@drawable/bg4">
 
     <LinearLayout
+        android:id="@+id/mainLi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
     <TextView
         android:id="@+id/txtName"
@@ -60,8 +61,6 @@
         android:textColor="@color/colorWhite"
         android:textSize="18sp"/>
         </LinearLayout>
-
-
         <LinearLayout
             android:id="@+id/li2"
             android:layout_width="match_parent"
@@ -91,40 +90,37 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/li3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp">
-
-            <TextView
-                android:id="@+id/txtQty"
-                android:layout_width="143dp"
-                android:layout_height="41dp"
-
-                android:text="Quantity"
-                android:textColor="@color/colorDBlue"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/eTQty"
-                android:layout_width="143dp"
-                android:layout_height="match_parent"
-                android:layout_below="@id/txtPrice"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="4dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="Enter Quantity"
-                android:inputType="number"
-                android:text=""
-                android:textColor="@color/colorWhite"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtQty"
+        android:layout_width="143dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/mainLi"
+        android:text="Quantity"
+        android:textColor="@color/colorDBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"/>
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/ele1"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        app:initialNumber="1"
+        app:finalNumber="10"
+        android:background="@color/cardview_dark_background"
+        android:layout_below="@+id/mainLi"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:layout_alignLeft="@+id/txtQty"
+        android:layout_marginLeft="145dp"
+        >
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
     <ImageButton
         android:id="@+id/btnAddCart"
         android:layout_width="90dp"
@@ -145,6 +141,8 @@
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_shopping_cart_white_24dp"
         android:background="@drawable/btn_very_rounded_pink"/>
+
+
 
 
 </RelativeLayout>

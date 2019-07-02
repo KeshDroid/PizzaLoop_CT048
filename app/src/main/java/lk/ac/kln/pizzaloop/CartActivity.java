@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,13 +45,15 @@ public class CartActivity extends AppCompatActivity {
         imgBtnDel=(ImageButton) findViewById(R.id.imgBtnDel);
         listView1 = (ListView) findViewById(R.id.listView1);
 
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<>
+        ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (this,android.R.layout.activity_list_item);
        // imgBtnDel.setAdapter
 
-        listView1.setAdapter(adapter1);
+        listView1.setAdapter(adapter);
 
-        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+       listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?>   parent, View view, int position, long id) {
                 Object ob1 = listView1.getItemAtPosition(position);
@@ -96,6 +99,8 @@ public class CartActivity extends AppCompatActivity {
         });*/
     }
 
+
+
     public void goToPurchase(){
         Intent intent = new Intent(CartActivity.this,PaymentOptions.class);
         startActivity(intent);
@@ -135,17 +140,45 @@ public class CartActivity extends AppCompatActivity {
 
     private class CustomAdapter extends ArrayAdapter<Cart>{
         private  List<Cart> itemsList;
+        private int layout;
 
         CustomAdapter(Context context, int resource, List<Cart> items){
             super(context,resource,items);
             itemsList = items;
+            layout = resource;
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent){
+        public View getView(final int position, View convertView, ViewGroup parent){
             if(convertView == null){
                 convertView = getLayoutInflater().from(getContext()).inflate(R.layout.cart_load,parent,false);
+                ViewHolder viewHolder= new ViewHolder();
+                viewHolder.imgBtnDel= (ImageButton) convertView.findViewById(R.id.imgBtnDel);
+                viewHolder.imgBtnAdd= (ImageButton) convertView.findViewById(R.id.imgBtnAdd);
+                viewHolder.imgBtnList= (ImageButton) convertView.findViewById(R.id.imgBtnList);
+                viewHolder.imgBtnDel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getContext(),"111" ,Toast.LENGTH_SHORT).show();
+                    }
+                });
 
+                viewHolder.imgBtnAdd.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getContext(),"100" ,Toast.LENGTH_SHORT).show();
+
+
+                    }
+                });
+
+                viewHolder.imgBtnList.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getContext(),"Food Items" ,Toast.LENGTH_SHORT).show();
+                        goToList();
+                    }
+                });
             }
 
             Cart item = itemsList.get(position);
@@ -158,5 +191,16 @@ public class CartActivity extends AppCompatActivity {
             tv2.setText(""+item.getQty());
             return  convertView;
         }
+    }
+
+    public void goToList() {
+        Intent intent = new Intent(CartActivity.this,FoodItems.class);
+        startActivity(intent);
+    }
+
+    public class ViewHolder{
+        ImageButton imgBtnDel;
+        ImageButton imgBtnAdd;
+        ImageButton imgBtnList;
     }
 }

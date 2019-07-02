@@ -40,6 +40,7 @@ public class FoodItems extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_items);
+        getSupportActionBar().setTitle("FOOD LIST");
         listView = (ListView) findViewById(R.id.listView);
 
 
@@ -59,6 +60,7 @@ public class FoodItems extends AppCompatActivity {
                 intent.putExtra("imgurl",pizza.getImgurl());
                 intent.putExtra("price",pizza.getPrice());
                 startActivityForResult(intent, 0);
+                System.out.println("ghhdhh");
                // startActivityForResult(intent, );
 
 

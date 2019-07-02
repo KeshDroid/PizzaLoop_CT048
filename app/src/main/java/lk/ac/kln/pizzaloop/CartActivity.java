@@ -30,43 +30,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class CartActivity extends AppCompatActivity {
 
     ImageButton imgBtnPurchase;
     ImageButton imgBtnDel;
 
    private List<Cart> cartDetails = new ArrayList<>();
-   ListView listView1;
+   ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+        getSupportActionBar().setTitle("CART");
 
-        imgBtnDel=(ImageButton) findViewById(R.id.imgBtnDel);
-        listView1 = (ListView) findViewById(R.id.listView1);
+       // imgBtnDel=(ImageButton) findViewById(R.id.imgBtnDel);
+        listView = (ListView) findViewById(R.id.listView1);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (this,android.R.layout.activity_list_item);
        // imgBtnDel.setAdapter
 
-        listView1.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
-
-
-       listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?>   parent, View view, int position, long id) {
-                Object ob1 = listView1.getItemAtPosition(position);
-                Cart cart = (Cart) ob1;
-                Intent intent1 = new Intent(view.getContext(),FoodUpdate.class);
-                intent1.putExtra("pizName",cart.getPizName());
-                intent1.putExtra("qty",cart.getQty());
-                intent1.putExtra("cPrice",cart.getcPrice());
-                intent1.putExtra("total",cart.getTotal());
-                startActivityForResult(intent1, 0);
-                // startActivityForResult(intent, );
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Object ob = listView.getItemAtPosition(position);
+                Cart cart = (Cart) ob;
 
-
+                Intent intent = new Intent(view.getContext(), FoodUpdate.class);
+                intent.putExtra("pizName", cart.getPizName());
+                intent.putExtra("cPrice", cart.getcPrice());
+                intent.putExtra("qty", cart.getQty());
+                intent.putExtra("total", cart.getTotal());
+                startActivityForResult(intent, 0);
+                System.out.println("fsgsg");
             }
         });
 
@@ -81,7 +80,7 @@ public class CartActivity extends AppCompatActivity {
 
 
         imgBtnPurchase=(ImageButton) findViewById(R.id.imgBtnPurchase);
-        imgBtnDel=(ImageButton) findViewById(R.id.imgBtnDel);
+       // imgBtnDel=(ImageButton) findViewById(R.id.imgBtnDel);
         imgBtnPurchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -152,16 +151,16 @@ public class CartActivity extends AppCompatActivity {
         public View getView(final int position, View convertView, ViewGroup parent){
             if(convertView == null){
                 convertView = getLayoutInflater().from(getContext()).inflate(R.layout.cart_load,parent,false);
-                ViewHolder viewHolder= new ViewHolder();
-                viewHolder.imgBtnDel= (ImageButton) convertView.findViewById(R.id.imgBtnDel);
-                viewHolder.imgBtnAdd= (ImageButton) convertView.findViewById(R.id.imgBtnAdd);
-                viewHolder.imgBtnList= (ImageButton) convertView.findViewById(R.id.imgBtnList);
-                viewHolder.imgBtnDel.setOnClickListener(new View.OnClickListener() {
+               // ViewHolder viewHolder= new ViewHolder();
+                //viewHolder.imgBtnDel= (ImageButton) convertView.findViewById(R.id.imgBtnDel);
+              //  viewHolder.imgBtnAdd= (ImageButton) convertView.findViewById(R.id.imgBtnAdd);
+               // viewHolder.imgBtnList= (ImageButton) convertView.findViewById(R.id.imgBtnList);
+              /*  viewHolder.imgBtnDel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(getContext(),"111" ,Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*
 
                 viewHolder.imgBtnAdd.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -178,7 +177,7 @@ public class CartActivity extends AppCompatActivity {
                         Toast.makeText(getContext(),"Food Items" ,Toast.LENGTH_SHORT).show();
                         goToList();
                     }
-                });
+                });*/
             }
 
             Cart item = itemsList.get(position);
@@ -198,9 +197,11 @@ public class CartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public class ViewHolder{
+  /*  public class ViewHolder{
         ImageButton imgBtnDel;
         ImageButton imgBtnAdd;
         ImageButton imgBtnList;
-    }
+    }*/
+
+
 }

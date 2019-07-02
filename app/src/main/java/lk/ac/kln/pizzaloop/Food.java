@@ -55,7 +55,8 @@ public class Food extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        Qunty=(ElegantNumberButton) findViewById(R.id.ele1);
+        getSupportActionBar().setTitle("FOOD DETAILS");
+      //  Qunty=(ElegantNumberButton) findViewById(R.id.ele1);
         Intent intent = getIntent();
 
         TextView name = (TextView) findViewById(R.id.txtName);
@@ -65,8 +66,6 @@ public class Food extends AppCompatActivity {
         btnAddCart = (ImageButton) findViewById(R.id.btnAddCart);
         imgBtnGoCart1 = (ImageButton) findViewById(R.id.imgBtnGoCart1);
 
-
-       // name.setText(intent.getStringExtra("name"));
         pizName= intent.getStringExtra("name");
         name.setText(pizName);
 
@@ -84,7 +83,7 @@ public class Food extends AppCompatActivity {
 
         elegantNumberButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { //To edit quantity
                 qty1= elegantNumberButton.getNumber();
                 fqty=Integer.parseInt(qty1);
                 qty= Float.parseFloat(qty1);
@@ -94,21 +93,17 @@ public class Food extends AppCompatActivity {
         });
 
 
-
-        //btnAddCart = (Button) findViewById(R.id.btnAddCart);
-
         btnAddCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
               if (qty!=0){
                     addCart();
+
                 }else{
                     Toast.makeText(Food.this, "Quantity is Empty.", Toast.LENGTH_SHORT).show();
                 }
-                // ShowPop();
-               // openNext();
-                addCart();
+
             }
         });
 
@@ -119,11 +114,6 @@ public class Food extends AppCompatActivity {
             }
         });
 
-
-
-
-       //fprice=total;
-      // fqty=qty;
     }
 
 

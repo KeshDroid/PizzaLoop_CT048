@@ -99,7 +99,6 @@
         android:hint="Quantity"
         android:textColor="@color/colorWhite"
         android:textSize="23sp"
-
         android:textStyle="bold"
 
         />
@@ -107,40 +106,7 @@
 
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="23dp">
-        <ImageButton
-            android:id="@+id/imgBtnDel"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_delete_white_24dp"
-            android:background="@drawable/btn_very_rounded_pink"
 
-            />
-
-        <ImageButton
-            android:id="@+id/imgBtnAdd"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_create_white_24dp"
-            android:background="@drawable/btn_very_rounded_green"
-            android:layout_marginTop="8dp"
-            />
-        <ImageButton
-            android:id="@+id/imgBtnList"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_format_list_bulleted_white_24dp"
-            android:background="@drawable/btn_very_rounded_purpl"
-            android:layout_marginTop="8dp"
-            />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="406dp"

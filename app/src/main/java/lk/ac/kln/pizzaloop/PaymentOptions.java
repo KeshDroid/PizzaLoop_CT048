@@ -15,6 +15,7 @@ public class PaymentOptions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_options);
+        getSupportActionBar().setTitle("PAYMENT");
 
         btnCre= (Button) findViewById(R.id.btnCre);
         btnCash= (Button) findViewById(R.id.btnCash);

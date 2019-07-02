@@ -13,13 +13,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".FoodUpdate"></activity>
-        <activity android:name=".CartActivity" />
+        <activity android:name=".CartActivity">
+
+        </activity>
         <activity android:name=".FoodItems">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
         <activity android:name=".CashOn" />

@@ -187,7 +187,7 @@ public class CartActivity extends AppCompatActivity {
             TextView tv2 =convertView.findViewById(R.id.txtCartQty);
 
             tv.setText(""+item.getPizName());
-            tv1.setText("Rs."+item.getcPrice());
+            tv1.setText("Rs."+item.getTotal());
             tv2.setText(""+item.getQty());
             return  convertView;
         }

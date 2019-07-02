@@ -32,10 +32,11 @@ public class Food extends AppCompatActivity {
     ImageButton btnAddCart;
     private Float price1,total,fprice,finTot;
     private String pizName;
-    public  Integer qty , fqty;
+    public  Float qty ;
     public String qty1;
     public EditText eTQty;
     private String  des;
+    public Integer fqty;
     public int ff;
 
     ElegantNumberButton elegantNumberButton;
@@ -85,7 +86,8 @@ public class Food extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 qty1= elegantNumberButton.getNumber();
-                qty= Integer.parseInt(qty1);
+                fqty=Integer.parseInt(qty1);
+                qty= Float.parseFloat(qty1);
                 total= qty*price1;
                 System.out.println(total);
             }
@@ -134,7 +136,7 @@ public class Food extends AppCompatActivity {
     }
 
     public void addCart(){
-        String url = "http://192.168.8.112:8080/demo/addcart?pizName="+pizName + "&cPrice="+price1  + "&qty="+ qty + "&total=" +total;
+        String url = "http://192.168.8.112:8080/demo/addcart?pizName="+pizName + "&cPrice="+price1  + "&qty="+ fqty + "&total=" +total;
         RequestQueue requestQueue = Volley.newRequestQueue(Food.this);
         StringRequest stringRequest =new StringRequest(
                 Request.Method.GET, url, new HTTPResponseListner(),
